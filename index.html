@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Electric Co. — Master Electricians, Philadelphia</title>
+<meta name="description" content="Meridian Electric Co. is a Philadelphia master-electrician shop. Panel upgrades, whole-home rewires, EV chargers, standby generators, and commercial fit-outs. Family-run since 1987.">
+<meta name="theme-color" content="#F5F3EF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   MERIDIAN ELECTRIC CO. — SWISS INTERNATIONAL
+   Archivo / #F5F3EF / #111 / #E63524 / 0px radius
+   ========================================================= */
+
+:root{
+  --bg:#F5F3EF;
+  --ink:#111111;
+  --ink-2:#333333;
+  --ink-3:#7A7568;
+  --rule:#D8D3C9;
+  --rule-strong:#B5AFA3;
+  --accent:#E63524;
+  --white:#FFFFFF;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+ul{list-style:none}
+
+h1,h2,h3,h4{
+  font-family:'Archivo',sans-serif;
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.05;
+  color:var(--ink);
+}
+
+/* ---------- utility ---------- */
+.container{
+  width:min(100% - 40px, 1240px);
+  margin-inline:auto;
+}
+@media (min-width:900px){
+  .container{width:min(100% - 80px, 1240px)}
+}
+
+.skip{
+  position:absolute;left:0;top:-48px;
+  background:var(--ink);color:#fff;
+  padding:12px 18px;font-size:13px;z-index:100;
+  transition:top .2s;
+}
+.skip:focus{top:0}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:var(--bg);
+  border-bottom:1px solid var(--rule);
+}
+.header-inner{
+  display:flex;align-items:center;gap:36px;
+  padding:16px 0;
+  position:relative;
+}
+
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand-mark{
+  width:32px;height:32px;
+  background:var(--accent);
+  position:relative;
+  flex:none;
+}
+.brand-mark::after{
+  content:"";
+  position:absolute;inset:9px;
+  background:var(--bg);
+}
+.brand-text{
+  font-size:14px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  line-height:1.05;
+}
+.brand-text small{
+  display:block;
+  font-size:9px;font-weight:500;
+  letter-spacing:.2em;color:var(--ink-3);
+  margin-top:3px;
+}
+
+.nav{
+  display:flex;gap:28px;flex:1;justify-content:center;
+}
+.nav a{
+  font-size:12px;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-2);
+  padding:10px 0;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s,color .2s;
+}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+.cta-header{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#fff;
+  padding:12px 18px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  min-height:44px;
+  transition:background .2s,border-color .2s;
+}
+.cta-header:hover{background:var(--accent);border-color:var(--accent)}
+
+.menu-btn{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid var(--rule-strong);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  flex:none;
+}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--ink)}
+
+@media (max-width:900px){
+  .nav{
+    display:none;
+    position:absolute;top:100%;left:-20px;right:-20px;
+    background:var(--bg);
+    border-bottom:1px solid var(--rule);
+    padding:0 20px;
+    flex-direction:column;gap:0;flex:unset;
+  }
+  .nav.open{display:flex}
+  .nav a{
+    padding:16px 0;
+    border-bottom:1px solid var(--rule);
+    width:100%;
+  }
+  .nav a:last-child{border-bottom:0}
+  .cta-header{display:none}
+  .menu-btn{display:flex}
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{border-top:1px solid var(--rule)}
+
+.hero-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+  gap:80px;
+  padding:88px 0 96px;
+  align-items:start;
+}
+
+.hero-head{
+  display:flex;flex-direction:column;gap:28px;
+  max-width:640px;
+}
+
+.eyebrow{
+  display:flex;align-items:center;gap:12px;
+  font-size:11px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.eyebrow::before{
+  content:"";
+  display:block;width:24px;height:1px;
+  background:var(--accent);
+  flex:none;
+}
+
+.hero h1{
+  font-size:clamp(2.6rem, 6vw, 5.2rem);
+  font-weight:900;
+  letter-spacing:-.04em;
+  line-height:.94;
+}
+.hero h1 br{display:none}
+@media (min-width:600px){.hero h1 br{display:block}}
+
+.hero-intro{
+  font-size:17px;
+  line-height:1.6;
+  color:var(--ink-2);
+  max-width:56ch;
+}
+
+.hero-cta{
+  display:flex;align-items:center;gap:28px;
+  flex-wrap:wrap;
+  padding-top:8px;
+}
+
+.btn-primary{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--ink);color:#fff;
+  padding:16px 24px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  min-height:48px;
+  transition:background .2s,border-color .2s;
+}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+
+.hero-phone{
+  font-size:15px;font-weight:600;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.hero-phone:hover{color:var(--accent);border-color:var(--accent)}
+
+.hero-panel{
+  border-left:1px solid var(--rule);
+  padding-left:40px;
+}
+
+.panel-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-3);
+  padding-bottom:16px;
+  border-bottom:1px solid var(--rule);
+}
+
+.panel-row
