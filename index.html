@@ -257,4 +257,1018 @@ textarea:focus-visible{
   border-bottom:1px solid var(--rule);
 }
 
-.panel-row
+.panel-row{
+  display:flex;justify-content:space-between;gap:20px;
+  padding:18px 0;
+  border-bottom:1px solid var(--rule);
+}
+.panel-row:last-child{border-bottom:0}
+.panel-key{
+  font-size:13px;font-weight:500;
+  color:var(--ink-2);
+}
+.panel-val{
+  font-size:13px;font-weight:600;
+  text-align:right;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.services{
+  border-top:1px solid var(--rule);
+  padding:96px 0;
+}
+
+.section-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);
+  gap:60px;
+  padding-bottom:48px;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:0;
+}
+@media (max-width:768px){.section-head{grid-template-columns:1fr;gap:20px}}
+
+.section-title{
+  font-size:clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+
+.section-note{
+  font-size:16px;
+  color:var(--ink-2);
+  max-width:58ch;
+  align-self:end;
+}
+
+.service-list{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.service{
+  display:grid;
+  grid-template-columns:60px minmax(0,1.1fr) minmax(0,1fr) auto;
+  gap:24px;
+  align-items:baseline;
+  padding:28px 0;
+  border-bottom:1px solid var(--rule);
+  transition:background .2s;
+}
+.service:last-child{border-bottom:0}
+.service:hover{background:var(--white)}
+
+.service-num{
+  font-size:11px;font-weight:600;
+  letter-spacing:.18em;
+  color:var(--ink-3);
+  padding-top:6px;
+}
+
+.service-name{
+  font-size:clamp(1.1rem, 2vw, 1.45rem);
+  font-weight:700;
+  letter-spacing:-.01em;
+}
+
+.service-desc{
+  font-size:14px;
+  color:var(--ink-2);
+  line-height:1.55;
+}
+
+.service-price{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--accent);
+  white-space:nowrap;
+  text-align:right;
+  padding-top:4px;
+}
+
+@media (max-width:768px){
+  .service{
+    grid-template-columns:40px 1fr;
+    gap:14px;
+    padding:22px 0;
+  }
+  .service-desc{grid-column:2}
+  .service-price{grid-column:2;text-align:left;padding-top:0}
+}
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+.certs{
+  border-top:1px solid var(--rule);
+  padding:96px 0;
+  background:var(--ink);
+  color:#fff;
+}
+.certs .section-title{color:#fff}
+.certs .section-note{color:#B5AFA3}
+.certs .section-head{border-bottom-color:#333}
+
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border-left:1px solid #333;
+}
+@media (max-width:768px){.cert-grid{grid-template-columns:1fr}}
+
+.cert{
+  padding:32px 28px;
+  border-right:1px solid #333;
+  border-bottom:1px solid #333;
+  display:flex;flex-direction:column;gap:12px;
+}
+.cert-icon{
+  width:32px;height:32px;
+  color:var(--accent);
+}
+.cert-name{
+  font-size:15px;font-weight:700;
+  letter-spacing:.02em;
+}
+.cert-body{
+  font-size:13px;
+  color:#B5AFA3;
+  line-height:1.5;
+}
+.cert-id{
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#7A7568;
+  margin-top:auto;
+  padding-top:12px;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery{
+  border-top:1px solid var(--rule);
+  padding:96px 0;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+.g-item{
+  background:var(--white);
+  padding:28px;
+  display:flex;flex-direction:column;gap:16px;
+  position:relative;
+  overflow:hidden;
+}
+.g-item.large{grid-column:span 7;grid-row:span 2}
+.g-item.small{grid-column:span 5}
+.g-item.wide{grid-column:span 5}
+@media (max-width:768px){
+  .gallery-grid{grid-template-columns:1fr}
+  .g-item.large,.g-item.small,.g-item.wide{grid-column:span 1;grid-row:auto}
+}
+
+.g-visual{
+  aspect-ratio:16/10;
+  background:var(--bg);
+  border:1px solid var(--rule);
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.g-visual svg{width:100%;height:100%;object-fit:cover}
+
+.g-cat{
+  font-size:10px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);
+}
+.g-title{
+  font-size:16px;font-weight:700;
+  letter-spacing:-.01em;
+}
+.g-meta{
+  font-size:12px;color:var(--ink-3);
+}
+
+/* =========================================================
+   BOOKING FORM
+   ========================================================= */
+.booking{
+  border-top:1px solid var(--rule);
+  padding:96px 0;
+}
+
+.booking-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  gap:80px;
+  align-items:start;
+}
+@media (max-width:900px){.booking-inner{grid-template-columns:1fr;gap:48px}}
+
+.booking-copy h2{
+  font-size:clamp(2rem, 4vw, 3rem);
+  font-weight:800;
+  letter-spacing:-.03em;
+  margin-bottom:20px;
+}
+.booking-copy p{
+  font-size:16px;
+  color:var(--ink-2);
+  max-width:48ch;
+  margin-bottom:32px;
+}
+
+.contact-block{
+  display:flex;flex-direction:column;gap:16px;
+  border-top:1px solid var(--rule);
+  padding-top:28px;
+}
+.contact-line{
+  display:flex;gap:12px;align-items:baseline;
+}
+.contact-label{
+  font-size:10px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-3);
+  width:72px;flex:none;
+}
+.contact-value{
+  font-size:15px;font-weight:500;
+}
+.contact-value a:hover{color:var(--accent)}
+
+.form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+@media (max-width:600px){.form{grid-template-columns:1fr}}
+
+.field{
+  display:flex;flex-direction:column;gap:6px;
+}
+.field.full{grid-column:1/-1}
+
+.field label{
+  font-size:10px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.field label .req{color:var(--accent)}
+
+.field input,
+.field select,
+.field textarea{
+  font-family:inherit;
+  font-size:15px;
+  color:var(--ink);
+  background:var(--bg);
+  border:1px solid var(--rule-strong);
+  padding:12px 14px;
+  min-height:46px;
+  border-radius:0;
+  transition:border-color .2s,background .2s;
+  width:100%;
+}
+.field textarea{min-height:100px;resize:vertical}
+.field select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:38px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  outline:2px solid var(--accent);
+  outline-offset:0;
+  background:var(--white);
+  border-color:var(--accent);
+}
+
+.field .error{
+  display:none;
+  font-size:11px;
+  color:var(--accent);
+  font-weight:500;
+  letter-spacing:.02em;
+}
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea{
+  border-color:var(--accent);
+  background:#fff5f4;
+}
+.field.invalid .error{display:block}
+
+.form .submit{
+  grid-column:1/-1;
+  margin-top:8px;
+}
+
+.btn-submit{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;
+  background:var(--accent);color:#fff;
+  padding:16px 24px;
+  font-size:12px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--accent);
+  min-height:52px;
+  transition:background .2s,border-color .2s,transform .1s;
+}
+.btn-submit:hover{background:#c42a1b;border-color:#c42a1b}
+.btn-submit:active{transform:translateY(1px)}
+
+.form-success{
+  display:none;
+  padding:40px 0;
+}
+.form-success.show{display:block}
+.form-success h3{
+  font-size:24px;font-weight:800;
+  margin-bottom:12px;
+}
+.form-success p{
+  font-size:15px;color:var(--ink-2);
+  max-width:48ch;
+  margin-bottom:20px;
+}
+.form-success a{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+  font-weight:600;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  border-top:1px solid var(--rule);
+  padding:56px 0 32px;
+  background:var(--ink);
+  color:#B5AFA3;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:48px;
+  border-bottom:1px solid #333;
+}
+@media (max-width:768px){.footer-top{grid-template-columns:1fr 1fr;gap:32px}}
+@media (max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+.footer .brand-text{color:#fff}
+.footer .brand-text small{color:#7A7568}
+.footer .brand-mark::after{background:var(--ink)}
+
+.footer-desc{
+  font-size:13px;
+  line-height:1.6;
+  max-width:32ch;
+  margin-top:16px;
+}
+
+.footer-col h4{
+  font-size:11px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:#fff;
+  margin-bottom:16px;
+}
+.footer-col ul{
+  display:flex;flex-direction:column;gap:10px;
+}
+.footer-col a{
+  font-size:13px;
+  transition:color .2s;
+}
+.footer-col a:hover{color:#fff}
+
+.footer-bottom{
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding-top:28px;
+  font-size:11px;
+  letter-spacing:.06em;
+  color:#7A7568;
+}
+.footer-bottom a:hover{color:#fff}
+
+@media (max-width:480px){
+  .hero-inner{grid-template-columns:1fr;gap:48px;padding:64px 0 72px}
+  .hero-panel{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:32px}
+  .services,.certs,.gallery,.booking{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="#" aria-label="Meridian Electric Co. home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        Meridian
+        <small>Electric Co.</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#work">Selected Work</a>
+      <a href="#booking">Book a Visit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="cta-header" href="#booking">Request a quote</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-inner">
+
+    <div class="hero-head">
+      <p class="eyebrow">Philadelphia &middot; Since 1987</p>
+      <h1>Wiring the row&shy;houses<br>of Fairmount, Fishtown,<br>and beyond.</h1>
+      <p class="hero-intro">
+        Meridian Electric is a two-truck shop of master electricians working out of
+        Spring Garden. We handle panel upgrades, knob-and-tube replacements,
+        EV chargers, and standby generators — the unglamorous work that keeps
+        old Philadelphia houses safe and modern.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#booking">Book a site visit</a>
+        <a class="hero-phone" href="tel:+12155550142">(215) 555-0142</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel" aria-label="Shop details">
+      <p class="panel-label">Shop notes</p>
+
+      <div class="panel-row">
+        <span class="panel-key">License</span>
+        <span class="panel-val">PA Master #EL-004821</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-key">Response</span>
+        <span class="panel-val">Same-week estimates</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-key">Hours</span>
+        <span class="panel-val">Mon–Fri 7:30a–5p</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-key">Emergency</span>
+        <span class="panel-val">24/7 for existing clients</span>
+      </div>
+      <div class="panel-row">
+        <span class="panel-key">Warranty</span>
+        <span class="panel-val">5-year workmanship</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 class="section-title">What we actually do</h2>
+      <p class="section-note">
+        No smart-home upsells, no subscription panels. We rewire, upgrade, and repair
+        the electrical systems in rowhouses, twins, and small commercial buildings
+        across Philadelphia. Prices below are starting points; every job gets a
+        written scope before we open a wall.
+      </p>
+    </div>
+
+    <div class="service-list">
+
+      <div class="service">
+        <span class="service-num">01</span>
+        <h3 class="service-name">Panel upgrades &amp; service changes</h3>
+        <p class="service-desc">
+          100A to 200A upgrades, fuse-box replacements, and meter-stack repairs.
+          Permits pulled, PECO coordinated, inspection scheduled.
+        </p>
+        <span class="service-price">From $2,400</span>
+      </div>
+
+      <div class="service">
+        <span class="service-num">02</span>
+        <h3 class="service-name">Whole-home rewiring</h3>
+        <p class="service-desc">
+          Knob-and-tube and cloth-wire replacement in occupied rowhouses.
+          Plaster repair coordination included; we patch what we open.
+        </p>
+        <span class="service-price">From $8,500</span>
+      </div>
+
+      <div class="service">
+        <span class="service-num">03</span>
+        <h3 class="service-name">EV charger installation</h3>
+        <p class="service-desc">
+          Level 2 chargers in garages, carports, and curb cuts. Load calculations,
+          trenching, and dedicated 240V circuits.
+        </p>
+        <span class="service-price">From $850</span>
+      </div>
+
+      <div class="service">
+        <span class="service-num">04</span>
+        <h3 class="service-name">Standby generators</h3>
+        <p class="service-desc">
+          Generac and Kohler air-cooled units, automatic transfer switches,
+          and annual maintenance contracts.
+        </p>
+        <span class="service-price">From $6,200</span>
+      </div>
+
+      <div class="service">
+        <span class="service-num">05</span>
+        <h3 class="service-name">Commercial fit-outs</h3>
+        <p class="service-desc">
+          Tenant improvements for cafés, studios, and offices. Lighting layouts,
+          dedicated circuits, and ADA-compliant switching.
+        </p>
+        <span class="service-price">By scope</span>
+      </div>
+
+      <div class="service">
+        <span class="service-num">06</span>
+        <h3 class="service-name">Repairs &amp; troubleshooting</h3>
+        <p class="service-desc">
+          Dead outlets, tripping breakers, flickering lights, and the ghost
+          problems that only show up in August.
+        </p>
+        <span class="service-price">$145 diagnostic</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="certs" id="certifications">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 class="section-title">Licensed, bonded, and inspected</h2>
+      <p class="section-note">
+        Every electrician on our crew holds a current PA license and carries
+        their own liability coverage. Certificates are posted in the office
+        and available on request.
+      </p>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2 4 6v6c0 5 3.4 9.2 8 10 4.6-.8 8-5 8-10V6z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span class="cert-name">PA Master Electrician</span>
+        <span class="cert-body">License #EL-004821, issued by the City of Philadelphia Department of Licenses &amp; Inspections.</span>
+        <span class="cert-id">Active &middot; Renewed 2025</span>
+      </div>
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M6 10h4M6 14h8"/>
+        </svg>
+        <span class="cert-name">$2M General Liability</span>
+        <span class="cert-body">Policy held with Erie Insurance, certificate of insurance available for GCs and property managers.</span>
+        <span class="cert-id">Current &middot; 2025–26</span>
+      </div>
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+        <span class="cert-name">Workers' Comp</span>
+        <span class="cert-body">Full coverage for all field employees through the PA State Workers' Insurance Fund.</span>
+        <span class="cert-id">Active &middot; 2025</span>
+      </div>
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4L14.7 6.3Z"/>
+        </svg>
+        <span class="cert-name">NEC 2023 Certified</span>
+        <span class="cert-body">All work performed to the 2023 National Electrical Code and Philadelphia amendments.</span>
+        <span class="cert-id">Code cycle 2023</span>
+      </div>
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2v20M5 7l7-5 7 5"/>
+          <path d="M3 22h18"/>
+        </svg>
+        <span class="cert-name">Generac Pro Partner</span>
+        <span class="cert-body">Factory-trained on Generac air-cooled and liquid-cooled standby systems since 2019.</span>
+        <span class="cert-id">Partner #PA-1187</span>
+      </div>
+
+      <div class="cert">
+        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span class="cert-name">Philadelphia L&amp;I Registered</span>
+        <span class="cert-body">Registered contractor with the City of Philadelphia, authorized to pull electrical permits in all zoning districts.</span>
+        <span class="cert-id">Reg. #CR-88214</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="work">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 class="section-title">Recent jobs, unretouched</h2>
+      <p class="section-note">
+        A few projects from the last eighteen months. Addresses withheld at the
+        owner's request; references available on request.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <article class="g-item large">
+        <div class="g-visual">
+          <svg viewBox="0 0 600 340" role="img" aria-label="Illustration of a 200-amp panel upgrade in a Fairmount rowhouse basement">
+            <rect width="600" height="340" fill="#F5F3EF"/>
+            <rect x="120" y="40" width="360" height="260" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <rect x="140" y="60" width="140" height="30" fill="#111"/>
+            <rect x="300" y="60" width="160" height="30" fill="#E63524"/>
+            <g stroke="#111" stroke-width="2">
+              <line x1="150" y1="120" x2="450" y2="120"/>
+              <line x1="150" y1="150" x2="450" y2="150"/>
+              <line x1="150" y1="180" x2="450" y2="180"/>
+              <line x1="150" y1="210" x2="450" y2="210"/>
+              <line x1="150" y1="240" x2="450" y2="240"/>
+            </g>
+            <g fill="#E63524">
+              <rect x="150" y="110" width="30" height="20"/>
+              <rect x="190" y="110" width="30" height="20"/>
+              <rect x="230" y="110" width="30" height="20"/>
+              <rect x="270" y="110" width="30" height="20"/>
+            </g>
+            <rect x="140" y="270" width="320" height="16" fill="#D8D3C9"/>
+          </svg>
+        </div>
+        <span class="g-cat">Panel upgrade</span>
+        <h3 class="g-title">200A service change, Fairmount rowhouse</h3>
+        <p class="g-meta">Replaced a 60A fuse box and cloth wiring; PECO disconnect coordinated, inspection passed first visit.</p>
+      </article>
+
+      <article class="g-item small">
+        <div class="g-visual">
+          <svg viewBox="0 0 420 240" role="img" aria-label="Illustration of a Level 2 EV charger installed in a Fishtown garage">
+            <rect width="420" height="240" fill="#F5F3EF"/>
+            <rect x="160" y="50" width="100" height="150" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <rect x="180" y="70" width="60" height="40" fill="#111"/>
+            <circle cx="210" cy="160" r="18" fill="none" stroke="#E63524" stroke-width="3"/>
+            <path d="M210 142v36M192 160h36" stroke="#E63524" stroke-width="2"/>
+            <path d="M260 120 Q340 120 360 60" stroke="#111" stroke-width="3" fill="none"/>
+            <rect x="340" y="40" width="50" height="30" fill="#111"/>
+          </svg>
+        </div>
+        <span class="g-cat">EV charger</span>
+        <h3 class="g-title">Level 2 charger, Fishtown garage</h3>
+        <p class="g-meta">60A dedicated circuit, load calculation on a 100A service, charger commissioned in a single morning.</p>
+      </article>
+
+      <article class="g-item wide">
+        <div class="g-visual">
+          <svg viewBox="0 0 500 240" role="img" aria-label="Illustration of a whole-home rewire in a South Philadelphia twin">
+            <rect width="500" height="240" fill="#F5F3EF"/>
+            <path d="M60 200 L60 80 L140 40 L220 80 L220 200 Z" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <path d="M260 200 L260 80 L340 40 L420 80 L420 200 Z" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <g stroke="#E63524" stroke-width="2.5" fill="none">
+              <path d="M80 100 h60 v40 h-60"/>
+              <path d="M160 120 v60 h40"/>
+              <path d="M280 100 h60 v40 h-60"/>
+              <path d="M360 120 v60 h40"/>
+            </g>
+            <circle cx="140" cy="40" r="4" fill="#111"/>
+            <circle cx="340" cy="40" r="4" fill="#111"/>
+          </svg>
+        </div>
+        <span class="g-cat">Whole-home rewire</span>
+        <h3 class="g-title">Knob-and-tube replacement, South Philly twin</h3>
+        <p class="g-meta">Two units rewired over eleven working days with the family in residence; plaster patched and painted by our sub.</p>
+      </article>
+
+      <article class="g-item small">
+        <div class="g-visual">
+          <svg viewBox="0 0 420 240" role="img" aria-label="Illustration of a standby generator beside a Chestnut Hill home">
+            <rect width="420" height="240" fill="#F5F3EF"/>
+            <rect x="50" y="120" width="80" height="80" fill="#111"/>
+            <rect x="60" y="130" width="60" height="20" fill="#E63524"/>
+            <rect x="170" y="140" width="130" height="60" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <path d="M190 140 v-30 h50 v30" fill="none" stroke="#111" stroke-width="2"/>
+            <rect x="320" y="80" width="70" height="120" fill="#fff" stroke="#B5AFA3" stroke-width="2"/>
+            <path d="M335 80 v-30 M355 80 v-30 M375 80 v-30" stroke="#111" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="g-cat">Standby generator</span>
+        <h3 class="g-title">22kW Generac, Chestnut Hill</h3>
+        <p class="g-meta">Automatic transfer switch, natural-gas connection, and a maintenance contract signed before we left the driveway.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="booking" id="booking">
+  <div class="container booking-inner">
+
+    <div class="booking-copy">
+      <h2>Tell us what's flickering.</h2>
+      <p>
+        Send the form and we'll call you back within one business day with a
+        two-hour arrival window. For active burning smells, sparking, or exposed
+        conductors, call the shop directly — don't wait on email.
+      </p>
+
+      <div class="contact-block" id="contact">
+        <div class="contact-line">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value"><a href="tel:+12155550142">(215) 555-0142</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Email</span>
+          <span class="contact-value"><a href="mailto:shop@meridianelectric.com">shop@meridianelectric.com</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Shop</span>
+          <span class="contact-value">411 N 7th St, Philadelphia, PA 19123</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-label">Hours</span>
+          <span class="contact-value">Mon–Fri 7:30a–5p &middot; Sat by appointment</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form class="form" id="bookingForm" novalidate>
+        <div class="field">
+          <label for="name">Name <span class="req">*</span></label>
+          <input id="name" name="name" type="text" required autocomplete="name" placeholder="Ruth Kowalski">
+          <small class="error">Please enter your name.</small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(215) 555-0199">
+          <small class="error">Enter a phone number with at least 10 digits.</small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <small class="error">That email doesn't look right.</small>
+        </div>
+
+        <div class="field">
+          <label for="zip">ZIP <span class="req">*</span></label>
+          <input id="zip" name="zip" type="text" inputmode="numeric" required autocomplete="postal-code" placeholder="19130">
+          <small class="error">Enter a 5-digit ZIP code.</small>
+        </div>
+
+        <div class="field">
+          <label for="service">Service <span class="req">*</span></label>
+          <select id="service" name="service" required>
+            <option value="">Select one…</option>
+            <option>Panel upgrade / service change</option>
+            <option>Whole-home rewire</option>
+            <option>EV charger</option>
+            <option>Standby generator</option>
+            <option>Commercial fit-out</option>
+            <option>Repair / troubleshooting</option>
+            <option>Something else</option>
+          </select>
+          <small class="error">Choose the service you need.</small>
+        </div>
+
+        <div class="field">
+          <label for="timeline">Timeline</label>
+          <select id="timeline" name="timeline">
+            <option>This week</option>
+            <option>Next week</option>
+            <option>Within the month</option>
+            <option>Just pricing it out</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="details">What's going on?</label>
+          <textarea id="details" name="details" placeholder="Age of the house, what's tripping or dead, whether you've had any work done recently."></textarea>
+        </div>
+
+        <div class="submit">
+          <button class="btn-submit" type="submit">Request a callback</button>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <h3>Request received.</h3>
+        <p>
+          We'll call you within one business day to schedule. If the issue is
+          urgent, call <a href="tel:+12155550142">(215) 555-0142</a> and we'll
+          pick up.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+        <a class="brand" href="#" aria-label="Meridian Electric Co. home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            Meridian
+            <small>Electric Co.</small>
+          </span>
+        </a>
+        <p class="footer-desc">
+          Master electricians serving Philadelphia rowhouses, twins, and small
+          commercial buildings since 1987.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Panel upgrades</a></li>
+          <li><a href="#services">Whole-home rewires</a></li>
+          <li><a href="#services">EV chargers</a></li>
+          <li><a href="#services">Generators</a></li>
+          <li><a href="#services">Repairs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#booking">Book a visit</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+12155550142">(215) 555-0142</a></li>
+          <li><a href="mailto:shop@meridianelectric.com">shop@meridianelectric.com</a></li>
+          <li>411 N 7th St<br>Philadelphia, PA 19123</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Meridian Electric Co. &middot; PA Master #EL-004821</span>
+      <span><a href="#main">Back to top</a></span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Mobile nav ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+
+  menuBtn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- Booking form ---------- */
+  var form = document.getElementById('bookingForm');
+  var success = document.getElementById('formSuccess');
+
+  function fieldOf(el) { return el.closest('.field'); }
+
+  function valid(el) {
+    var v = el.value.trim();
+    if (!v) return false;
+    if (el.type === 'tel') return v.replace(/\D/g, '').length >= 10;
+    if (el.id === 'zip') return /^\d{5}$/.test(v);
+    if (el.type === 'email' && v) return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    return true;
+  }
+
+  form.querySelectorAll('[required]').forEach(function (el) {
+    var check = function () {
+      if (valid(el)) fieldOf(el).classList.remove('invalid');
+    };
+    el.addEventListener('input', check);
+    el.addEventListener('change', check);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var ok = true;
+    var firstBad = null;
+
+    form.querySelectorAll('[required]').forEach(function (el) {
+      var good = valid(el);
+      fieldOf(el).classList.toggle('invalid', !good);
+      if (!good) {
+        ok = false;
+        if (!firstBad) firstBad = el;
+      }
+    });
+
+    if (!ok) {
+      if (firstBad) firstBad.focus();
+      return;
+    }
+
+    /* ---- DEMO SUBMIT ----
+       Replace with a real endpoint, e.g. Formspree:
+       fetch('https://formspree.io/f/YOUR_ID', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+         body: JSON.stringify(Object.fromEntries(new FormData(form)))
+       }).then(function () { showSuccess(); });
+    */
+    showSuccess();
+  });
+
+  function showSuccess() {
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.reset();
+  }
+
+  /* ---------- Footer year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
